@@ -1,0 +1,221 @@
+/* Main */
+/* main__content */
+main{
+    flex: 1;
+    margin-top: 5.5rem;
+    padding: 2rem 0;
+}
+
+.main__header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__header-text{
+    background-color: var( --bg-secondary-light);
+    color: var(--text-primary);
+    display: inline-flex;
+    padding: 0.2rem 1.6rem 0.2rem 5rem;
+    border-radius: 0 20px 20px 0;
+    margin: 0;
+}
+
+
+.main__header-container a {
+    text-decoration: none;
+    margin-right: 6rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 3px 20px;
+    border-radius: 12px;
+    color: var(--bg-secondary);
+}
+
+
+
+.main__header-container a:active {
+    opacity: 0.8;
+}
+
+.main__header-container a span{
+    background-color: var(--bg-tertiary);
+    color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--bg-secondary);
+}
+
+.main__list{
+    margin: 30px 70px;
+    padding: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.no-post-message{
+    color: var( --text-primary-light);
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.main__list-item{
+    width: 25rem;
+    background-color: #75846a;
+    padding: 15px 25px;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+.noise{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/noise.png");
+    opacity: 0.5; 
+    background-repeat: repeat; 
+    background-size: cover;
+    height: 100%; 
+    width: 100%; 
+}
+
+.main__list-item h2,
+.main__list-item p,
+.main__btn-group {
+    position: relative; 
+    z-index: 1;
+}
+
+.main__list-item h2{
+    margin: 0;
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.main__list-item p{
+    margin: 0;
+    text-transform: capitalize;
+    color: var(--bg-secondary-light);
+}
+
+.main__btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.main__btn-group a{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 0 28px;
+    margin: 0;
+    border: 1px solid #595959;
+}
+
+.main__btn-group button{
+    font-size: 1rem;
+    font-family: "Eczar";
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 0px 20px;
+    cursor: pointer;
+    border: 1px solid #595959;
+}
+
+.main__btn-group .edit{
+    background-color: var(--bg-tertiary);
+
+}
+
+.main__btn-group .delete{
+    background-color: var(--bg-quaternary);
+}
+
+
+
+
+/* Form create */
+
+.create__form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin: 10px 150px;
+    border-radius: 20px;
+}
+
+.create__form-container form{
+    background-color: var(--bg-secondary-lighter);
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;  
+    width: 60%;    
+    padding: 40px;
+    border-radius: 20px;
+    border: 5px solid var(--bg-tertiary);
+}
+
+.create__form-container form input{
+    height: 45px;   
+    border-radius: 10px;
+    border: 3px solid var(--bg-tertiary);
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: "Eczar"; 
+}
+
+.create__form-container form textarea:focus,
+.create__form-container form input:focus{
+   outline: none;
+}
+
+.create__form-container form textarea{
+    resize: none;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid var(--bg-tertiary);
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Eczar"; 
+}
+
+
+.create__form-container form button{
+    font-size: 1.2rem;
+    font-family: "Eczar";
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: 1px solid #595959;
+    background-color: var(--bg-tertiary);
+}
+
+.create__form-container form button:active{
+  opacity: 0.8;
+}

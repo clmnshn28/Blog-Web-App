@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-primary:#F8F7E5;
+    --bg-secondary: #1D1D1D;
+    --bg-secondary-light: #1d1d1ddc;
+    --bg-secondary-lighter: #1d1d1da3;
+    --bg-tertiary: #7ecf86;
+    --bg-tertiary-lighter: #7ecf865c;
+    --bg-quaternary: #d397b1;
+    --text-primary: #F8F7E5;
+    --text-primary-light: #aaa9a1cb;
+}
+
+body{
+    background-color: var(--bg-primary);
+    font-family: "Eczar";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+

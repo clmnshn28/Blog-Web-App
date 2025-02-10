@@ -1,0 +1,10 @@
+
+/* Footer */
+
+footer{
+    background-color: var(--bg-secondary);
+    text-align: center;
+    padding: 1em;
+    color: var(--bg-primary);
+    margin-top: auto 0;
+}

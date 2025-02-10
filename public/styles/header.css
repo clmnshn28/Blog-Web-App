@@ -1,0 +1,28 @@
+
+header{
+    background-color: var(--bg-secondary);
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bg-primary);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--bg-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+

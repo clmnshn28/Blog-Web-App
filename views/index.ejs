@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="main__header-container">
+        <h1 class="main__header-text">All Posts</h1>
+        <a  href="/create">
+            <span>+</span>
+            Create New Post
+        </a>
+    </div>
+
+    <div class="main__list">
+        <% if(posts.length === 0) { %>
+        <p class="no-post-message">It looks like there are no posts here yet.</p>
+        <% }else{ %>
+            <% posts.forEach(post => {%>
+                <div class="main__list-item">
+                    <h2><%= post.title %></h2>
+                    <p><%= post.content %></p>
+                    <div class="main__btn-group">
+                        <a class="edit" href="/edit/<%=post.id%>">Edit</a>
+                        <form action="/delete/<%=post.id%>" method="post">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </div>
+                    <div class="noise"></div>
+                </div>
+            <%}); %>
+        <% } %>
+       
+    </div>
+
+
+<%- include("partials/footer.ejs") %>
