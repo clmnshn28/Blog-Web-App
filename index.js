@@ -18,9 +18,24 @@ app.get("/create", (req, res)=>{
 
 app.post("/create", (req, res)=>{
     console.log(req.body)
-    const {title, content} = req.body;
-    posts.unshift({id: posts.length + 1, title, content})
+    const {title, content, author} = req.body;
+    posts.unshift({
+        id: posts.length + 1, 
+        title, 
+        content, 
+        author,
+        createdAt: new Date().toLocaleDateString("en-US",{
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+        }),
+    })
     res.redirect("/");
+})
+
+app.get("/view/:id",(req, res)=>{
+    const post = posts.find(p=> p.id === Number(req.params.id));
+    res.render("view.ejs", {post});
 })
 
 app.get("/edit/:id", (req, res)=>{
@@ -33,6 +48,7 @@ app.post("/edit/:id", (req, res)=>{
     const post = posts.find(p => p.id === Number(req.params.id));
     post.title = req.body.title;
     post.content = req.body.content;
+    post.author = req.body.author;
     res.redirect("/");
 })  
 

@@ -4,7 +4,21 @@
 footer{
     background-color: var(--bg-secondary);
     text-align: center;
-    padding: 1em;
+    padding: 1.3em 1.3em 1em;
     color: var(--bg-primary);
     margin-top: auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    border: 2px dashed var(--text-primary);
+    border-radius: 10px;
+    pointer-events: none;
 }

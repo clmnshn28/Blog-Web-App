@@ -6,7 +6,10 @@
 
     <div class="create__form-container">
         <form action="/create" method="POST">
-            <input type="text" name="title" placeholder="Title" required />
+            <div class="create__input-separator">
+                <input type="text" name="title" placeholder="Title" autocomplete="off" required />
+                <input type="text" name="author" placeholder="Author" autocomplete="off" required />
+            </div>
             <textarea name="content" placeholder="Content" required></textarea>
             <button type="submit">Create</button>
         </form>

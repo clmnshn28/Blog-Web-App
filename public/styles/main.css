@@ -10,6 +10,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .main__header-text{
@@ -19,8 +20,20 @@ main{
     padding: 0.2rem 1.6rem 0.2rem 5rem;
     border-radius: 0 20px 20px 0;
     margin: 0;
+    position: relative;
 }
 
+.main__header-text::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px dashed var(--text-primary-light);
+    border-radius: 15px;
+    pointer-events: none;
+}
 
 .main__header-container a {
     text-decoration: none;
@@ -33,6 +46,7 @@ main{
     padding: 3px 20px;
     border-radius: 12px;
     color: var(--bg-secondary);
+    position: relative;
 }
 
 
@@ -53,6 +67,10 @@ main{
     border: 1px solid var(--bg-secondary);
 }
 
+
+
+
+/* list */
 .main__list{
     margin: 30px 70px;
     padding: 20px;
@@ -71,18 +89,28 @@ main{
 .main__list-item{
     width: 25rem;
     background-color: #75846a;
-    padding: 15px 25px;
+    padding: 20px 30px;
     border-radius: 15px;
     position: relative;
 }
 
+.main__list-item::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px dashed var(--text-primary);
+    border-radius: 10px;
+}
 
 .noise{
     position: absolute;
     top: 0;
     left: 0;
     background-image: url("../images/noise.png");
-    opacity: 0.5; 
+    opacity: 0.3; 
     background-repeat: repeat; 
     background-size: cover;
     height: 100%; 
@@ -97,19 +125,40 @@ main{
 }
 
 .main__list-item h2{
-    margin: 0;
-    width: 95%;
+    margin: 0 0 5px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: capitalize;
+    font-family: "inter";
 }
 
 
-.main__list-item p{
-    margin: 0;
+.main__list-content{
+    margin: 0 0 5px;
     text-transform: capitalize;
     color: var(--bg-secondary-light);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "inter";
 }
+
+.main__list-date,
+.main__list-author{
+    color: var(--bg-secondary-lighter);
+    font-size: 0.93rem;
+    text-transform: capitalize;
+    font-family: "inter";
+    margin-bottom: 5px;
+}
+
+
+
 
 .main__btn-group{
     display: flex;
@@ -126,20 +175,21 @@ main{
     text-decoration: none;
     color: var(--bg-secondary);
     border-radius: 8px;
-    padding: 0 28px;
+    padding: 7px 28px;
     margin: 0;
-    border: 1px solid #595959;
+    border: 2px solid #797979;
+    font-family: "inter";
 }
 
 .main__btn-group button{
     font-size: 1rem;
-    font-family: "Eczar";
+    font-family: "inter";
     font-weight: 500;
     border: none;
     border-radius: 8px;
-    padding: 0px 20px;
+    padding: 7px 20px;
     cursor: pointer;
-    border: 1px solid #595959;
+    border: 2px solid #797979;
 }
 
 .main__btn-group .edit{
@@ -147,9 +197,91 @@ main{
 
 }
 
+.main__btn-group .view{
+    background-color: var(--bg-quinary);
+
+}
+
 .main__btn-group .delete{
     background-color: var(--bg-quaternary);
 }
+
+.main__btn-group a:active,
+.main__btn-group button:active{
+    opacity: 0.8;
+}
+
+
+
+
+
+/* view */
+
+.view__header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 20rem 0px;
+    font-family: "inter";
+    text-align: center;
+}
+
+.view__header-text{
+    background-color: var( --bg-secondary-lighter);
+    color: var(--text-primary);
+    padding: 0.7rem 3rem 1rem;
+    font-size: 2.2rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+.view__header-text span::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px dashed var(--text-primary-light);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.view__header-text-date{
+    font-size: 0.9rem;
+    margin: 10px 0 5px;
+}
+
+.view__header-text-author{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.view__content{
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view__all-content{
+    width: 50%;
+    text-align: justify;
+    font-family: "inter";
+    line-height: 1.9rem;
+    white-space: pre-wrap;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -173,6 +305,29 @@ main{
     padding: 40px;
     border-radius: 20px;
     border: 5px solid var(--bg-tertiary);
+    position: relative;
+}
+
+.create__input-separator::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px dashed var(--text-primary);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.create__input-separator{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.create__input-separator input:first-child{
+    flex: 1;
 }
 
 .create__form-container form input{
@@ -183,7 +338,9 @@ main{
     color: var(--bg-secondary);
     padding-left: 20px;
     font-size: 16px;
-    font-family: "Eczar"; 
+    font-weight: 600;
+    font-family: "inter"; 
+    text-transform: capitalize;
 }
 
 .create__form-container form textarea:focus,
@@ -200,17 +357,41 @@ main{
     color: var(--bg-secondary);
     padding: 10px 20px;
     font-size: 16px;
-    font-family: "Eczar"; 
+    font-family: "inter"; 
+    line-height: 1.5rem;
+    text-align: justify;
+    text-transform: capitalize;
+    white-space: pre-wrap;
 }
+
+.create__form-container form textarea::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.create__form-container form textarea::-webkit-scrollbar-thumb {
+    background-color: #608f82; 
+    border-radius: 10px;
+}
+
+.create__form-container form textarea::-webkit-scrollbar-track {
+    background-color: #c8ded9; 
+    border-radius: 10px;
+}
+
+.create__form-container form textarea::-webkit-scrollbar-thumb:hover {
+    background: #53796e;
+}
+
 
 
 .create__form-container form button{
     font-size: 1.2rem;
-    font-family: "Eczar";
+    font-family: "Inter";
     font-weight: 500;
     border: none;
     border-radius: 8px;
-    padding: 5px 20px;
+    padding: 10px 20px;
+    color: var(--bg-secondary);
     cursor: pointer;
     border: 1px solid #595959;
     background-color: var(--bg-tertiary);

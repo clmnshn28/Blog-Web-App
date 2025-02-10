@@ -45,9 +45,21 @@ nodemon index.js
 
 *The application will be running at: http://localhost:3000 🌍*
 
+## 👀 Overview
+
+![Home Page](public/images/image1.png)
+
+![Create Blog Page](public/images/image2.png)
+
+![Edit Blog Page](public/images/image3.png)
+
+![View Blog Page](public/images/image4.png)
+
+![Delete Blog ](public/images/image5.png)
 
 
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, please create an issue or submit a pull request.
 
 💡 Let's build something awesome together! 🚀
+
