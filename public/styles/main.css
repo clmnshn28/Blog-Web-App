@@ -74,16 +74,21 @@ main{
 .main__list{
     margin: 30px 70px;
     padding: 20px;
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    row-gap: 45px;
+    position: relative;
+
 }
 
 .no-post-message{
     color: var( --text-primary-light);
-    margin: 0 auto;
     font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main__list-item{
@@ -324,13 +329,12 @@ main{
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.create__input-separator input:first-child{
+.create__input-separator input{
     flex: 1;
-}
-
-.create__form-container form input{
     height: 45px;   
     border-radius: 10px;
     border: 3px solid var(--bg-tertiary);
@@ -342,6 +346,8 @@ main{
     font-family: "inter"; 
     text-transform: capitalize;
 }
+
+
 
 .create__form-container form textarea:focus,
 .create__form-container form input:focus{
@@ -387,7 +393,7 @@ main{
 .create__form-container form button{
     font-size: 1.2rem;
     font-family: "Inter";
-    font-weight: 500;
+    font-weight: 600;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
