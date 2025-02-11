@@ -2,13 +2,9 @@
 A simple blog web application built with Node.JS, Express.JS and EJS that allows users to **create**, **view**, **edit**, and **delete** posts.
 
 ## ✨ Features
--  Create new blog posts (📰 Title & ✍️ Content)  
--  View all blog posts on the homepage 📃  
--  View a specific blog post 🧐  
--  Edit existing blog posts ✏️  
--  Delete blog posts 🗑️  
--  Responsive and clean design 🎨  
-
+- **Post Creation**: Users should be able to create new posts.
+- **Post Viewing**: The home page should allow the user to view all their posts.
+- **Post Update/Delete**: Users can be edit and delete posts.
 
 
 ## 💻 Tech Stack
