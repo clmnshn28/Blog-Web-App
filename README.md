@@ -57,5 +57,8 @@ nodemon index.js
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, please create an issue or submit a pull request.
 
+## 🪪 License
+This project is open-source and available under the MIT License.
+
 💡 Let's build something awesome together! 🚀
 
