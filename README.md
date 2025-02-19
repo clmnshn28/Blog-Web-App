@@ -7,13 +7,13 @@ A simple blog web application built with Node.JS, Express.JS and EJS that allows
 - **Post Update/Delete**: Users can be edit and delete posts.
 
 
-## 💻 Tech Stack
+## </> Tech Stack
 - Node.js: JavaScript runtime used to build the server-side logic.
 - Express.js: Web framework for Node.js, used to create the server, handle HTTP requests, define routes, and manage middleware.
 - EJS: Templating engine for rendering dynamic HTML content.
 
 
-## 🚀 Getting Started
+## 💡 Getting Started
 ### 1️⃣ Clone the Repository
 ```bash
 https://github.com/clmnshn28/Blog-Web-App.git
@@ -41,7 +41,7 @@ nodemon index.js
 
 *The application will be running at: http://localhost:3000 🌍*
 
-## 👀 Overview
+## 🔎 Overview
 
 ![Home Page](public/images/image1.png)
 
