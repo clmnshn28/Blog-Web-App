@@ -1,5 +1,5 @@
 # 🌟 Blog Web Application
-A simple blog web application built with Node.JS, Express.JS and EJS that allows users to **create**, **view**, **edit**, and **delete** posts.
+A simple blog web application built with `Node.JS`, `Express.JS` and `EJS` that allows users to **create**, **view**, **edit**, and **delete** posts.
 
 ## ✨ Features
 - **Post Creation**: Users should be able to create new posts.
